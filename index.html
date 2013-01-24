@@ -1,0 +1,79 @@
+	
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Minimalist Frogger by Karen C. Aragon</title>
+<meta charset="utf8">
+<meta name="author" content="Karen C. Aragon"> 
+<link href="style.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+	<script language="javascript" src="js/jquery.hotkeys.js" type="text/javascript"></script>
+	<script language="javascript" src="js/key_status.js" type="text/javascript"></script>
+	<script language="javascript" src="js/util.js" type="text/javascript"></script>
+	<script language="javascript" src="js/sprite.js" type="text/javascript"></script>
+	<script language="javascript" src="js/sound.js" type="text/javascript"></script>
+	
+<style>
+
+canvas{
+  display:block;
+  margin:30px auto 0;
+  padding-bottom: 50px;
+}
+
+.instructions{
+	padding: 15px;
+	font-family: 'MuseoSans';
+
+}
+
+.button{
+	font-family: 'Bebas';
+}
+
+
+</style>
+</head>
+
+<body onload="init()">
+	<script type="text/javascropt">
+	
+
+	window.requestAnimFrame = (function(){
+	return  window.requestAnimationFrame       || 
+		window.webkitRequestAnimationFrame || 
+		window.mozRequestAnimationFrame    || 
+		window.oRequestAnimationFrame      || 
+		window.msRequestAnimationFrame     ||  
+		function( callback ){
+			return window.setTimeout(callback, 1000 / 60);
+		};
+	})();
+
+	window.cancelRequestAnimFrame = ( function() {
+	return window.cancelAnimationFrame          ||
+		window.webkitCancelRequestAnimationFrame    ||
+		window.mozCancelRequestAnimationFrame       ||
+		window.oCancelRequestAnimationFrame     ||
+		window.msCancelRequestAnimationFrame        ||
+		clearTimeout
+	} )();
+	
+	
+	</script>
+
+		<h1>Minimalist Frogger </h1>
+		<input type="button" style="font-family: 'Bebas'; name="answer" value="INSTRUCTIONS" id="button" />
+
+		<div id="instructionDiv"  style="display:none;" class="instructions" > 
+		<br/> + use arrow keys to navigate
+		<br/> + avoid obstacles in your path, i.e. cars, skateboards, boxes, flying birds
+		<br/> + if you see water, you must use the logs to cross it
+		<br/> + land on the opposite side and advance to the next level</div>
+		<canvas id="canvas" ></canvas>
+	
+
+	<script src="js/frogger.js" type="text/javascript"></script>	
+
+</body>
+</html>

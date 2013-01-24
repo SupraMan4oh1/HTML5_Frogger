@@ -1,0 +1,61 @@
+
+/*--------------
+    author: Karen C. Aragon
+    title: Modern Frogger CSS
+    date: 09/13/12
+---------------*/
+
+
+html {
+	background: #eeeeee;
+	padding: 10px;	
+	}
+
+body {
+	background: #ffffff;
+	margin: 0 auto;
+	width: 700px;
+	border-radius: 15px;
+	padding: 15px;
+	
+	}
+
+h1 {
+	
+	font-family: 'Lobster';
+	text-align: center;
+	padding: 15px;
+	border-radius: 15px;
+	}
+
+h2 	{
+	font-family: 'Bebas';	
+	}
+
+canvas{
+	border-radius: 15px;
+}
+
+
+
+/*--------------
+    FONTS 
+---------------*/
+@font-face {
+	font-family: 'MuseoSans';
+	src: url('fonts/MuseoSans_500.eot');
+	src: url('fonts/MuseoSans_500.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/MuseoSans_500.woff') format('woff'),
+		 url('fonts/MuseoSans_500.ttf') format('truetype');	 
+	}
+
+@font-face {
+    font-family:'Bebas';
+    src: url('fonts/BEBAS___.ttf') format('truetype');
+	}
+
+@font-face {
+	font-family:'Lobster';
+	src: url('fonts/Lobster_1.3.otf') format('opentype');
+	font-weight: normal;
+	}
